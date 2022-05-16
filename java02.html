@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate a String - accept string from user and rotate the string</title>
+    <style></style>
+</head>
+<body>
+        <label>Enter the string to rotate</label>
+        <br>  <br>
+
+        <input type="text" id="txt">
+
+        <br>  <br>
+        <button class="btn"> click Me</button>
+        <p class="output"></p>
+
+    <script>
+
+             
+            
+       function rotatestr(){
+        let newString = document.getElementById('txt').value;
+     
+   
+          
+
+            console.log(newString);
+
+           let strreverse = '';
+            for(let i = newString.length - 1; i>=0; i--)
+            {
+                strreverse = strreverse + newString.charAt(i);
+            }
+        
+            
+        document.querySelector(".output").innerHTML = "The reversed string is:- " + strreverse;
+          
+           
+
+
+        }
+
+        
+     let btnClick = document.querySelector(".btn");
+     btnClick.addEventListener("click", rotatestr);  
+        
+    </script>
+</body>
+</html>
