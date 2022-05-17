@@ -24,7 +24,7 @@
        function rotatestr(){
         let newString = document.getElementById('txt').value;
      
-   
+     newString = newString.split("");
           
 
             console.log(newString);
@@ -32,7 +32,14 @@
            let strreverse = '';
             for(let i = newString.length - 1; i>=0; i--)
             {
-                strreverse = strreverse + newString.charAt(i);
+              removeFirst=newString.shift();
+                console.log(newString);
+                insertLast=newString.push(removeFirst);
+                console.log(newString);
+                strreverse += newString.join('') + "<br>";
+                
+           
+
             }
         
             
